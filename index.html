@@ -815,6 +815,220 @@ footer {
   letter-spacing: 0.03em;
 }
 
+/* ─── TRADES TABLE ─── */
+.trades-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trades-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.trades-search {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  width: 240px;
+  transition: border-color 0.3s;
+}
+
+.trades-search:focus { border-color: var(--accent); }
+
+.trades-search::placeholder { color: var(--text-muted); }
+
+.trades-filter {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239a9bab' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 2rem;
+}
+
+.trades-filter:focus { border-color: var(--accent); }
+
+.trades-stats {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.trades-stat-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.trades-stat-pill span { font-weight: 600; }
+.trades-stat-pill span.green { color: var(--accent); }
+.trades-stat-pill span.red { color: var(--red); }
+
+.trades-table-wrap {
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.trades-table-wrap::-webkit-scrollbar { width: 5px; }
+.trades-table-wrap::-webkit-scrollbar-track { background: var(--bg-card); }
+.trades-table-wrap::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.trades-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.trades-table th {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.trades-table th:hover { color: var(--text-primary); }
+
+.trades-table th .sort-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  opacity: 0.3;
+  font-size: 0.65rem;
+}
+
+.trades-table th.sorted .sort-arrow { opacity: 1; color: var(--accent); }
+
+.trades-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  background: var(--bg-card);
+  transition: background 0.2s;
+}
+
+.trades-table tr:hover td { background: var(--bg-card-hover); }
+
+.trades-table .ticker-cell {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trades-table .pnl-positive { color: var(--accent); font-family: var(--font-mono); font-weight: 600; }
+.trades-table .pnl-negative { color: var(--red); font-family: var(--font-mono); font-weight: 600; }
+
+.trades-table .status-win {
+  background: rgba(0,230,118,0.1);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trades-table .status-loss {
+  background: rgba(255,82,82,0.1);
+  color: var(--red);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trades-table .status-open {
+  background: rgba(255,167,38,0.1);
+  color: #ffa726;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trades-empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.trades-loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+.trades-loading .spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.trades-count {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .trades-controls { flex-direction: column; align-items: stretch; }
+  .trades-search { width: 100%; }
+  .trades-stats { margin-left: 0; justify-content: space-between; }
+  .trades-table-wrap { font-size: 0.8rem; }
+  .trades-table th, .trades-table td { padding: 0.6rem 0.6rem; }
+}
+
 /* ─── DIVIDER ─── */
 .divider {
   max-width: 1100px;
@@ -1023,6 +1237,48 @@ footer {
 
 <hr class="divider">
 
+<!-- WINNING TRADES TABLE -->
+<section id="trades" class="trades-section fade-in">
+  <div class="section-label">// Closed Positions</div>
+  <div class="section-title">Our trades — fully transparent</div>
+  <div class="section-desc">Every closed trade is logged below. No hiding losses. Filter, sort, and see for yourself.</div>
+
+  <div class="trades-controls">
+    <input type="text" class="trades-search" id="tradesSearch" placeholder="Search ticker or type...">
+    <select class="trades-filter" id="tradesFilter">
+      <option value="all">All Trades</option>
+      <option value="win">Wins Only</option>
+      <option value="loss">Losses Only</option>
+      <option value="stock">Stocks</option>
+      <option value="option">Options</option>
+    </select>
+    <div class="trades-stats">
+      <div class="trades-stat-pill">Wins: <span class="green" id="winCount">—</span></div>
+      <div class="trades-stat-pill">Losses: <span class="red" id="lossCount">—</span></div>
+      <div class="trades-stat-pill">Win Rate: <span class="green" id="winRate">—</span></div>
+    </div>
+  </div>
+
+  <div class="trades-table-wrap">
+    <div class="trades-loading" id="tradesLoading">
+      <div class="spinner"></div>
+      Loading trades...
+    </div>
+    <table class="trades-table" id="tradesTable" style="display:none;">
+      <thead>
+        <tr id="tradesHeader"></tr>
+      </thead>
+      <tbody id="tradesBody"></tbody>
+    </table>
+    <div class="trades-empty" id="tradesEmpty" style="display:none;">
+      No trades match your filter.
+    </div>
+  </div>
+  <div class="trades-count" id="tradesCount"></div>
+</section>
+
+<hr class="divider">
+
 <!-- HOW IT WORKS -->
 <section class="how-it-works fade-in">
   <div class="section-label">// How It Works</div>
@@ -1170,6 +1426,244 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<!-- TRADES TABLE LOGIC -->
+<script>
+(function() {
+  // ── CONFIG: Change this URL to your CSV file in the same GitHub repo ──
+  // The CSV should be in the root of your repo, e.g., trades.csv
+  const CSV_URL = 'trades.csv';
+
+  let allTrades = [];
+  let sortCol = -1;
+  let sortAsc = true;
+  let headers = [];
+
+  // Special column names (case-insensitive) that get styling
+  const TICKER_COLS = ['ticker', 'symbol', 'stock'];
+  const PNL_COLS = ['p&l', 'pnl', 'p/l', 'profit', 'return', 'gain', 'p&l %', 'pnl %', 'return %', 'gain %', 'profit %', 'profit/loss'];
+  const STATUS_COLS = ['status', 'result', 'outcome'];
+  const TYPE_COLS = ['type', 'trade type', 'asset', 'category'];
+
+  function colMatch(header, list) {
+    return list.includes(header.toLowerCase().trim());
+  }
+
+  function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return { headers: [], rows: [] };
+    
+    function parseLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '"') {
+          inQuotes = !inQuotes;
+        } else if (ch === ',' && !inQuotes) {
+          result.push(current.trim());
+          current = '';
+        } else {
+          current += ch;
+        }
+      }
+      result.push(current.trim());
+      return result;
+    }
+
+    const headers = parseLine(lines[0]);
+    const rows = [];
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      const values = parseLine(line);
+      if (values.length === headers.length) {
+        rows.push(values);
+      }
+    }
+    return { headers, rows };
+  }
+
+  function renderHeader() {
+    const tr = document.getElementById('tradesHeader');
+    tr.innerHTML = '';
+    headers.forEach((h, i) => {
+      const th = document.createElement('th');
+      th.innerHTML = h + ' <span class="sort-arrow">▲</span>';
+      th.addEventListener('click', () => sortTable(i));
+      if (sortCol === i) th.classList.add('sorted');
+      tr.appendChild(th);
+    });
+  }
+
+  function renderRows(rows) {
+    const tbody = document.getElementById('tradesBody');
+    tbody.innerHTML = '';
+
+    if (rows.length === 0) {
+      document.getElementById('tradesTable').style.display = 'none';
+      document.getElementById('tradesEmpty').style.display = 'block';
+      document.getElementById('tradesCount').textContent = '';
+      return;
+    }
+
+    document.getElementById('tradesTable').style.display = 'table';
+    document.getElementById('tradesEmpty').style.display = 'none';
+
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      row.forEach((cell, i) => {
+        const td = document.createElement('td');
+        const colName = headers[i] || '';
+
+        if (colMatch(colName, TICKER_COLS)) {
+          td.classList.add('ticker-cell');
+          td.textContent = cell.toUpperCase();
+        } else if (colMatch(colName, PNL_COLS)) {
+          const num = parseFloat(cell.replace(/[%$,+\s]/g, ''));
+          const isNeg = cell.trim().startsWith('-');
+          if (!isNaN(num)) {
+            td.classList.add(isNeg ? 'pnl-negative' : 'pnl-positive');
+            td.textContent = cell;
+          } else {
+            td.textContent = cell;
+          }
+        } else if (colMatch(colName, STATUS_COLS)) {
+          const lower = cell.toLowerCase().trim();
+          const span = document.createElement('span');
+          if (lower === 'win' || lower === 'won' || lower === 'profit') {
+            span.className = 'status-win';
+          } else if (lower === 'loss' || lower === 'lost' || lower === 'stop') {
+            span.className = 'status-loss';
+          } else if (lower === 'open' || lower === 'active') {
+            span.className = 'status-open';
+          } else {
+            span.className = 'status-win';
+          }
+          span.textContent = cell;
+          td.appendChild(span);
+        } else {
+          td.textContent = cell;
+        }
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    document.getElementById('tradesCount').textContent = 'Showing ' + rows.length + ' of ' + allTrades.length + ' trades';
+  }
+
+  function getFilteredRows() {
+    const search = document.getElementById('tradesSearch').value.toLowerCase();
+    const filter = document.getElementById('tradesFilter').value;
+    
+    const statusIdx = headers.findIndex(h => colMatch(h, STATUS_COLS));
+    const typeIdx = headers.findIndex(h => colMatch(h, TYPE_COLS));
+
+    return allTrades.filter(row => {
+      // Search
+      if (search && !row.some(c => c.toLowerCase().includes(search))) return false;
+      
+      // Filter
+      if (filter === 'win' && statusIdx >= 0) {
+        const s = row[statusIdx].toLowerCase().trim();
+        if (s !== 'win' && s !== 'won' && s !== 'profit') return false;
+      }
+      if (filter === 'loss' && statusIdx >= 0) {
+        const s = row[statusIdx].toLowerCase().trim();
+        if (s !== 'loss' && s !== 'lost' && s !== 'stop') return false;
+      }
+      if (filter === 'stock' && typeIdx >= 0) {
+        if (!row[typeIdx].toLowerCase().includes('stock')) return false;
+      }
+      if (filter === 'option' && typeIdx >= 0) {
+        if (!row[typeIdx].toLowerCase().includes('option')) return false;
+      }
+
+      return true;
+    });
+  }
+
+  function updateStats() {
+    const statusIdx = headers.findIndex(h => colMatch(h, STATUS_COLS));
+    if (statusIdx < 0) {
+      document.getElementById('winCount').textContent = '—';
+      document.getElementById('lossCount').textContent = '—';
+      document.getElementById('winRate').textContent = '—';
+      return;
+    }
+    let wins = 0, losses = 0;
+    allTrades.forEach(row => {
+      const s = row[statusIdx].toLowerCase().trim();
+      if (s === 'win' || s === 'won' || s === 'profit') wins++;
+      else if (s === 'loss' || s === 'lost' || s === 'stop') losses++;
+    });
+    const total = wins + losses;
+    document.getElementById('winCount').textContent = wins;
+    document.getElementById('lossCount').textContent = losses;
+    document.getElementById('winRate').textContent = total > 0 ? Math.round((wins / total) * 100) + '%' : '—';
+  }
+
+  function sortTable(colIdx) {
+    if (sortCol === colIdx) {
+      sortAsc = !sortAsc;
+    } else {
+      sortCol = colIdx;
+      sortAsc = true;
+    }
+    allTrades.sort((a, b) => {
+      let va = a[colIdx] || '';
+      let vb = b[colIdx] || '';
+      // Try numeric
+      const na = parseFloat(va.replace(/[%$,+]/g, ''));
+      const nb = parseFloat(vb.replace(/[%$,+]/g, ''));
+      if (!isNaN(na) && !isNaN(nb)) {
+        return sortAsc ? na - nb : nb - na;
+      }
+      // Try date
+      const da = new Date(va);
+      const db = new Date(vb);
+      if (!isNaN(da) && !isNaN(db)) {
+        return sortAsc ? da - db : db - da;
+      }
+      // String
+      return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    });
+    renderHeader();
+    renderRows(getFilteredRows());
+  }
+
+  function applyFilters() {
+    renderRows(getFilteredRows());
+  }
+
+  // Event listeners
+  document.getElementById('tradesSearch').addEventListener('input', applyFilters);
+  document.getElementById('tradesFilter').addEventListener('change', applyFilters);
+
+  // Fetch CSV
+  fetch(CSV_URL)
+    .then(r => {
+      if (!r.ok) throw new Error('CSV not found');
+      return r.text();
+    })
+    .then(text => {
+      const parsed = parseCSV(text);
+      headers = parsed.headers;
+      allTrades = parsed.rows;
+      document.getElementById('tradesLoading').style.display = 'none';
+      renderHeader();
+      renderRows(allTrades);
+      updateStats();
+    })
+    .catch(err => {
+      console.log('Could not load trades CSV:', err);
+      document.getElementById('tradesLoading').innerHTML = 
+        '<p style="color:var(--text-muted);">No trades data available yet.<br><span style="font-size:0.8rem;">Add a <code>trades.csv</code> file to your repo to display trades here.</span></p>';
+    });
+})();
 </script>
 
 </body>
