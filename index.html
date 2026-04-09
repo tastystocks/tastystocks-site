@@ -576,14 +576,14 @@ section { padding: 6rem 2rem; }
 
 /* ─── PRICING ─── */
 .pricing {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
 
 .pricing-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
@@ -1112,7 +1112,7 @@ footer {
     </div>
     <div class="price-card featured">
       <span class="price-tag">Most Popular</span>
-      <h3>Paid</h3>
+      <h3>Monthly</h3>
       <div class="price-amount" style="color:var(--accent);">$8 <span>/ month</span></div>
       <ul class="price-features">
         <li>Everything in Free</li>
@@ -1123,6 +1123,21 @@ footer {
         <li>Full closed positions log</li>
       </ul>
       <a href="https://tastystocks.substack.com/subscribe" class="btn-price primary">Start Winning →</a>
+    </div>
+    <div class="price-card" style="border-color:rgba(255,167,38,0.4);box-shadow:0 0 30px rgba(255,167,38,0.08);">
+      <span class="price-tag" style="background:#ffa726;">Best Value</span>
+      <h3>Annual</h3>
+      <div class="price-amount" style="color:#ffa726;">$80 <span>/ year</span></div>
+      <div style="background:rgba(255,167,38,0.1);color:#ffa726;padding:0.3rem 0.8rem;border-radius:100px;font-size:0.75rem;font-weight:600;display:inline-block;margin-bottom:0.5rem;">Save $16 vs monthly</div>
+      <ul class="price-features">
+        <li>Everything in Monthly</li>
+        <li>Daily option trade alerts</li>
+        <li>Short options strategies</li>
+        <li>Real-time trade entries</li>
+        <li>Crypto analysis</li>
+        <li>Full closed positions log</li>
+      </ul>
+      <a href="https://tastystocks.substack.com/subscribe" class="btn-price primary" style="background:#ffa726;">Save with Annual →</a>
     </div>
   </div>
 </section>
