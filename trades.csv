@@ -1,7 +1,7 @@
 Sold Date,Ticker,Contract,Expiration,P&L,Position,Status
-3/17/26,GOOG,310c,3/20/26,$0.30 ,100% of holding sold,Win
-3/18/26,AEM,200 P,8/21/26,$0.30 ,50% of holding Sold,Win
-3/25/26,QQQ,590c,3/27/26,$0.25 ,100% of holding sold,Win
+3/17/26,GOOG,310c,3/20/26,30%,100% of holding sold,Win
+3/18/26,AEM,200 P,8/21/26,30%,50% of holding Sold,Win
+3/25/26,QQQ,590c,3/27/26,25%,100% of holding sold,Win
 4/8/26,AMZN,215c,4/17/26,157%,100% of holding sold,Win
 4/8/26,AMD,230C,4/10/26,70%,100% of holding sold,Win
 4/8/26,AMZN,225C,4/17/26,73%,100% of holding sold,Win
