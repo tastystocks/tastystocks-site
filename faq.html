@@ -124,6 +124,16 @@ body {
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
 
+.ticker-bar-econ { background: #1A1510; border-bottom: 1px solid rgba(176,125,42,0.2); overflow: hidden; height: 36px; display: flex; align-items: center; position: sticky; top: 0; width: 100%; z-index: 100; }
+.ticker-track { display: flex; gap: 3rem; animation: ticker-rtl 40s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 0.5rem; }
+.ticker-item .symbol { color: rgba(255,255,255,0.85); font-weight: 600; }
+.ticker-item .up { color: #6fcf7a; font-weight: 600; }
+.ticker-item .down { color: #e07070; font-weight: 600; }
+.ticker-item .neutral { color: rgba(255,255,255,0.6); font-weight: 600; }
+.econ-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(176,125,42,0.8); padding: 0 1.5rem 0 1rem; white-space: nowrap; border-right: 1px solid rgba(176,125,42,0.25); margin-right: 1rem; flex-shrink: 0; }
+@keyframes ticker-rtl { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+
 /* ─── NAV ─── */
 nav {
   width: 100%;
@@ -134,7 +144,7 @@ nav {
   background: var(--bg-card);
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: 0;
+  top: 36px;
   z-index: 99;
 }
 
@@ -529,6 +539,43 @@ footer {
 </style>
 </head>
 <body>
+
+<!-- ECON INDICATORS TICKER -->
+<div class="ticker-bar-econ">
+  <span class="econ-label">Markets</span>
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="symbol">WTI</span> $68.42 <span class="down">▼ 0.8%</span></div>
+    <div class="ticker-item"><span class="symbol">GOLD</span> $3,342 <span class="up">▲ 0.5%</span></div>
+    <div class="ticker-item"><span class="symbol">SILVER</span> $32.18 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">NAT GAS</span> $2.94 <span class="down">▼ 1.2%</span></div>
+    <div class="ticker-item"><span class="symbol">CPI YoY</span> 2.4% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">FED RATE</span> 4.25–4.50% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">10Y YIELD</span> 4.38% <span class="up">▲ 0.04</span></div>
+    <div class="ticker-item"><span class="symbol">2Y YIELD</span> 3.97% <span class="down">▼ 0.02</span></div>
+    <div class="ticker-item"><span class="symbol">VIX</span> 16.42 <span class="down">▼ 4.1%</span></div>
+    <div class="ticker-item"><span class="symbol">DXY</span> 104.82 <span class="up">▲ 0.2%</span></div>
+    <div class="ticker-item"><span class="symbol">EUR/USD</span> 1.0841 <span class="down">▼ 0.1%</span></div>
+    <div class="ticker-item"><span class="symbol">USD/JPY</span> 157.34 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">COPPER</span> $4.62 <span class="up">▲ 0.7%</span></div>
+    <div class="ticker-item"><span class="symbol">GDP GR</span> +2.8% <span class="neutral">Q1 2026</span></div>
+    <div class="ticker-item"><span class="symbol">UNEMP</span> 4.1% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">WTI</span> $68.42 <span class="down">▼ 0.8%</span></div>
+    <div class="ticker-item"><span class="symbol">GOLD</span> $3,342 <span class="up">▲ 0.5%</span></div>
+    <div class="ticker-item"><span class="symbol">SILVER</span> $32.18 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">NAT GAS</span> $2.94 <span class="down">▼ 1.2%</span></div>
+    <div class="ticker-item"><span class="symbol">CPI YoY</span> 2.4% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">FED RATE</span> 4.25–4.50% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">10Y YIELD</span> 4.38% <span class="up">▲ 0.04</span></div>
+    <div class="ticker-item"><span class="symbol">2Y YIELD</span> 3.97% <span class="down">▼ 0.02</span></div>
+    <div class="ticker-item"><span class="symbol">VIX</span> 16.42 <span class="down">▼ 4.1%</span></div>
+    <div class="ticker-item"><span class="symbol">DXY</span> 104.82 <span class="up">▲ 0.2%</span></div>
+    <div class="ticker-item"><span class="symbol">EUR/USD</span> 1.0841 <span class="down">▼ 0.1%</span></div>
+    <div class="ticker-item"><span class="symbol">USD/JPY</span> 157.34 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">COPPER</span> $4.62 <span class="up">▲ 0.7%</span></div>
+    <div class="ticker-item"><span class="symbol">GDP GR</span> +2.8% <span class="neutral">Q1 2026</span></div>
+    <div class="ticker-item"><span class="symbol">UNEMP</span> 4.1% <span class="neutral">—</span></div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
