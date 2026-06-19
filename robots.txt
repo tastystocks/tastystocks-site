@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block git metadata from crawlers
+Disallow: /.git/
+
+Sitemap: https://tastystocks.com/sitemap.xml
