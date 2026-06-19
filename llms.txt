@@ -1,0 +1,57 @@
+# Tasty Stocks
+
+> Expert stock picks, options trades, ETF analysis, and equity research — delivered daily to subscribers' inboxes.
+
+## About
+
+Tasty Stocks is a financial newsletter published on Substack. It has 200+ publications, maintains a 95%+ win rate across all closed trades, and has been running for over 3 years with 3,000+ total trades. Every closed position is logged publicly for full transparency.
+
+## What the Newsletter Covers
+
+- **Stock Recommendations** — researched picks with entry targets, stop losses, and profit targets
+- **Daily Options Trades** — calls, puts, and spreads with exact strikes, expirations, and position sizing
+- **Market Analysis** — daily pre-market and post-market breakdowns
+- **Short Options / Theta Gang** — premium-selling strategies for income in sideways or volatile markets
+- **Equity Research** — in-depth fundamental and technical analysis on individual equities and index funds
+- **ETF Analysis** — coverage of broad market and sector ETFs
+- **401(k) Guidance** — strategies and fund selection for retirement accounts
+- **Closed Positions Log** — full trade history published publicly (wins and losses)
+
+## Pricing
+
+- **Free** — weekly market overview, select stock picks, community access
+- **Monthly** — $8/month — full daily alerts, options plays, real-time entries, closed positions log
+- **Annual** — $80/year — everything in Monthly, saves $16 vs monthly
+
+## Key Stats
+
+- Win rate: 95%+
+- Subscribers: 10,000+
+- Publications: 200+
+- Total trades: 3,000+
+- Years active: 3+
+- Frequency: Daily trade alerts
+
+## Pages
+
+- Homepage: https://tastystocks.com/
+- What You Get: https://tastystocks.com/features.html
+- Track Record: https://tastystocks.com/track-record.html
+- Closed Positions: https://tastystocks.com/positions.html
+- Pricing: https://tastystocks.com/pricing.html
+- FAQ: https://tastystocks.com/faq.html
+- Terms of Service: https://tastystocks.com/terms-of-service.html
+
+## Subscribe
+
+- Substack: https://tastystocks.substack.com/subscribe
+- Archive: https://tastystocks.substack.com/archive
+- About: https://tastystocks.substack.com/about
+
+## Disclaimer
+
+Not financial advice. Past performance is not indicative of future results. All investing involves risk of loss.
+
+## Sitemap
+
+- https://tastystocks.com/sitemap.xml

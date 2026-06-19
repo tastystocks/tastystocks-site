@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Record — Tasty Stocks</title>
+<meta name="description" content="Tasty Stocks track record — 95%+ win rate across 200+ trades over 3 years. Every closed position published publicly. No cherry-picking.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tastystocks.com/track-record.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tastystocks.com/track-record.html">
+<meta property="og:title" content="Track Record — Tasty Stocks">
+<meta property="og:description" content="95%+ win rate across 200+ trades over 3 years. Every closed position published publicly.">
+<meta property="og:site_name" content="Tasty Stocks">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #FAFAF5;
+  --bg-secondary: #F2EDE0;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F7F3EB;
+  --accent: #B07D2A;
+  --accent-dim: #9A6B1F;
+  --accent-glow: rgba(176, 125, 42, 0.15);
+  --red: #C95F5F;
+  --text-primary: #211A0E;
+  --text-secondary: #5C4D36;
+  --text-muted: #A09070;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(176, 125, 42, 0.22);
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+nav { width: 100%; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 99; }
+.logo { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+.logo-icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; font-family: var(--font-mono); color: #FFFFFF; letter-spacing: 0.03em; }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.25s; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.btn-subscribe { background: var(--accent); color: #FFFFFF; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all 0.3s; }
+.btn-subscribe:hover { background: var(--accent-dim); transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-glow); }
+
+.page-header { max-width: 760px; margin: 0 auto; padding: 5rem 2rem 3rem; text-align: center; }
+.section-label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; color: var(--text-primary); }
+.page-header p { color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; font-weight: 300; margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+/* Stats row */
+.stats-row {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+}
+
+.stat-item { background: var(--bg-card); padding: 2rem 1rem; text-align: center; }
+.stat-number { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* Chart section */
+.chart-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+}
+
+.chart-section h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--text-primary); margin-bottom: 0.5rem; }
+.chart-section .sub { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; margin-bottom: 2rem; line-height: 1.6; }
+
+.chart-visual {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.chart-visual::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(176,125,42,0.07), transparent);
+  pointer-events: none;
+}
+
+.chart-bars { display: flex; align-items: flex-end; gap: 8px; height: 220px; position: relative; z-index: 1; }
+.chart-bar { flex: 1; border-radius: 4px 4px 0 0; animation: growBar 1s ease both; }
+.chart-bar.win { background: var(--accent); }
+.chart-bar.loss { background: var(--red); opacity: 0.7; }
+@keyframes growBar { from { height: 0 !important; } }
+
+.chart-legend { display: flex; justify-content: space-between; margin-top: 1rem; position: relative; z-index: 1; }
+.chart-legend span { font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono); }
+.chart-legend .dots { display: flex; gap: 1.25rem; font-size: 0.75rem; }
+.chart-legend .dot-win { color: var(--accent); }
+.chart-legend .dot-loss { color: var(--red); }
+
+/* Track points */
+.track-points-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.track-point-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
+}
+
+.track-point-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+.track-check {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background: rgba(176,125,42,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.track-point-card h4 { font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; color: var(--text-primary); }
+.track-point-card p { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6; font-weight: 300; }
+
+.btn-primary { background: var(--accent); color: #FFFFFF; padding: 0.9rem 2.5rem; border-radius: 12px; font-weight: 600; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s; }
+.btn-primary:hover { background: var(--accent-dim); transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); }
+
+.cta-strip { max-width: 1100px; margin: 0 auto; padding: 0 2rem 5rem; }
+.cta-strip-inner { background: var(--bg-card); border: 1px solid var(--border-accent); border-radius: 20px; padding: 3rem; text-align: center; position: relative; overflow: hidden; }
+.cta-strip-inner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(176,125,42,0.08), transparent 60%); pointer-events: none; }
+.cta-strip-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--text-primary); margin-bottom: 0.75rem; position: relative; }
+.cta-strip-inner p { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; max-width: 440px; margin: 0 auto 1.75rem; line-height: 1.65; position: relative; }
+
+footer { border-top: 1px solid var(--border); background: var(--bg-card); }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding: 4rem 2rem 3rem; max-width: 1100px; margin: 0 auto; }
+.footer-tagline { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.65; margin-top: 0.75rem; max-width: 280px; font-weight: 300; }
+.footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 1rem; }
+.footer-col a { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.6rem; transition: color 0.25s; }
+.footer-col a:hover { color: var(--accent); }
+.footer-disclaimer { display: block; color: var(--text-muted); font-size: 0.78rem; line-height: 1.65; margin-top: 0.25rem; }
+.footer-bottom { border-top: 1px solid var(--border); padding: 1.5rem 2rem; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: var(--text-muted); }
+.footer-bottom .footer-links { display: flex; gap: 1.5rem; }
+.footer-bottom .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.78rem; transition: color 0.25s; }
+.footer-bottom .footer-links a:hover { color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .nav-links a:not(.btn-subscribe) { display: none; }
+  nav { padding: 0.75rem 1.25rem; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .track-points-section { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.25rem 2rem; }
+  .footer-bottom { padding: 1.25rem; }
+  .chart-section, .track-points-section, .stats-row, .cta-strip { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .page-header { padding: 3rem 1.25rem 2rem; }
+}
+
+@media (max-width: 480px) {
+  .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">TS</div>
+    Tasty Stocks
+  </a>
+  <div class="nav-links">
+    <a href="features.html">What You Get</a>
+    <a href="track-record.html" class="active">Track Record</a>
+    <a href="positions.html">Closed Positions</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://tastystocks.substack.com/" class="btn-subscribe">Read the Newsletter →</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="section-label">// Track Record</div>
+  <h1>We publish our results. All of them.</h1>
+  <p>No cherry-picked screenshots. No hidden losses. Every closed position is logged publicly — verify our numbers yourself.</p>
+</div>
+
+<div class="stats-row">
+  <div class="stat-item">
+    <div class="stat-number">95%+</div>
+    <div class="stat-label">Win Rate</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">10K+</div>
+    <div class="stat-label">Subscribers</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">200+</div>
+    <div class="stat-label">Publications</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">3 Yrs</div>
+    <div class="stat-label">Track Record</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">3,000+</div>
+    <div class="stat-label">Total Trades</div>
+  </div>
+</div>
+
+<div class="chart-section">
+  <h2>Win / Loss Distribution</h2>
+  <p class="sub">Visual breakdown of recent closed trades. Green bars are wins, red bars are losses.</p>
+  <div class="chart-visual">
+    <div class="chart-bars">
+      <div class="chart-bar win" style="height:75%"></div>
+      <div class="chart-bar win" style="height:90%"></div>
+      <div class="chart-bar loss" style="height:20%"></div>
+      <div class="chart-bar win" style="height:85%"></div>
+      <div class="chart-bar win" style="height:65%"></div>
+      <div class="chart-bar win" style="height:95%"></div>
+      <div class="chart-bar win" style="height:80%"></div>
+      <div class="chart-bar win" style="height:70%"></div>
+      <div class="chart-bar win" style="height:88%"></div>
+      <div class="chart-bar win" style="height:60%"></div>
+      <div class="chart-bar loss" style="height:15%"></div>
+      <div class="chart-bar win" style="height:92%"></div>
+      <div class="chart-bar win" style="height:78%"></div>
+      <div class="chart-bar win" style="height:85%"></div>
+      <div class="chart-bar win" style="height:82%"></div>
+      <div class="chart-bar win" style="height:90%"></div>
+      <div class="chart-bar win" style="height:74%"></div>
+      <div class="chart-bar loss" style="height:18%"></div>
+      <div class="chart-bar win" style="height:86%"></div>
+      <div class="chart-bar win" style="height:93%"></div>
+    </div>
+    <div class="chart-legend">
+      <span>Recent 20 trades</span>
+      <div class="dots">
+        <span class="dot-win">● Win</span>
+        <span class="dot-loss">● Loss</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="track-points-section">
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>95%+ Win Rate Across 200+ Trades</h4>
+      <p>Consistently profitable across bull, bear, and sideways markets. Our edge comes from disciplined risk management and thorough pre-trade research.</p>
+    </div>
+  </div>
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>Full Transparency — Wins and Losses</h4>
+      <p>Every closed position is published with entry price, exit price, and P&amp;L. We do not remove losing trades from our record. Ever.</p>
+    </div>
+  </div>
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>Real-Time Trade Alerts</h4>
+      <p>Alerts go out when the trade is placed — not after the fact. Paid subscribers get the exact same entries we do.</p>
+    </div>
+  </div>
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>3 Years of Consistent Results</h4>
+      <p>Our track record spans multiple market cycles — bull runs, corrections, and high-volatility periods — across stocks, options, and ETFs.</p>
+    </div>
+  </div>
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>Verifiable Against Public Market Data</h4>
+      <p>Every trade in the log includes entry date and ticker. You can cross-reference any result against historical price data independently.</p>
+    </div>
+  </div>
+  <div class="track-point-card">
+    <div class="track-check">✓</div>
+    <div>
+      <h4>Defined-Risk Focus</h4>
+      <p>We favor defined-risk strategies — particularly in options — so every position has a known maximum loss before entry.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <h2>See every trade we have ever made</h2>
+    <p>The full closed positions log is available to all subscribers. Check our numbers yourself before committing to a paid plan.</p>
+    <a href="positions.html" class="btn-primary">View Closed Positions →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">TS</div>
+        Tasty Stocks
+      </a>
+      <p class="footer-tagline">Expert stock picks, options trades, ETF analysis, and equity research delivered daily to your inbox. 95%+ win rate, 3 years running.</p>
+      <a href="https://tastystocks.substack.com/subscribe" class="btn-subscribe" style="display:inline-block;margin-top:1.25rem;">Get Daily Alerts →</a>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <a href="https://tastystocks.substack.com/">Substack</a>
+      <a href="https://tastystocks.substack.com/subscribe">Subscribe</a>
+      <a href="https://tastystocks.substack.com/archive">Archive</a>
+      <a href="https://tastystocks.substack.com/about">About</a>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="features.html">What You Get</a>
+      <a href="track-record.html">Track Record</a>
+      <a href="positions.html">Closed Positions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <span class="footer-disclaimer">Not financial advice. Past performance is not indicative of future results. All investing involves risk of loss.</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TastyStocks LLC. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="robots.txt">Robots</a>
+      <a href="llms.txt">LLMs</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
