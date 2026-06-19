@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Tasty Stocks</title>
+<meta name="description" content="Privacy Policy for Tasty Stocks newsletter — how we collect, use, and protect your personal information.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tastystocks.com/privacy-policy.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tastystocks.com/privacy-policy.html">
+<meta property="og:title" content="Privacy Policy — Tasty Stocks">
+<meta property="og:site_name" content="Tasty Stocks">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #FAFAF5;
+  --bg-secondary: #F2EDE0;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F7F3EB;
+  --accent: #B07D2A;
+  --accent-dim: #9A6B1F;
+  --accent-glow: rgba(176, 125, 42, 0.15);
+  --red: #C95F5F;
+  --text-primary: #211A0E;
+  --text-secondary: #5C4D36;
+  --text-muted: #A09070;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(176, 125, 42, 0.22);
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+.ticker-bar-econ { background: #1A1510; border-bottom: 1px solid rgba(176,125,42,0.2); overflow: hidden; height: 36px; display: flex; align-items: center; position: sticky; top: 0; width: 100%; z-index: 100; }
+.ticker-track { display: flex; gap: 3rem; animation: ticker-rtl 40s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 0.5rem; }
+.ticker-item .symbol { color: rgba(255,255,255,0.85); font-weight: 600; }
+.ticker-item .up { color: #6fcf7a; font-weight: 600; }
+.ticker-item .down { color: #e07070; font-weight: 600; }
+.ticker-item .neutral { color: rgba(255,255,255,0.6); font-weight: 600; }
+.econ-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(176,125,42,0.8); padding: 0 1.5rem 0 1rem; white-space: nowrap; border-right: 1px solid rgba(176,125,42,0.25); margin-right: 1rem; flex-shrink: 0; }
+@keyframes ticker-rtl { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+
+nav { width: 100%; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); border-bottom: 1px solid var(--border); position: sticky; top: 36px; z-index: 99; }
+.logo { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+.logo-icon { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; font-family: var(--font-mono); color: #FFFFFF; letter-spacing: 0.03em; }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.25s; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.btn-subscribe { background: var(--accent); color: #FFFFFF; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all 0.3s; }
+.btn-subscribe:hover { background: var(--accent-dim); transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-glow); }
+
+.page-header { max-width: 760px; margin: 0 auto; padding: 5rem 2rem 2rem; }
+.section-label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--text-primary); }
+.page-header .meta { color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-family: var(--font-mono); }
+
+.tos-body { max-width: 760px; margin: 0 auto; padding: 2rem 2rem 6rem; }
+
+.tos-section { margin-bottom: 3rem; }
+.tos-section h2 { font-family: var(--font-display); font-size: 1.45rem; color: var(--text-primary); margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-accent); }
+.tos-section h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 1.5rem 0 0.5rem; }
+.tos-section p { color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem; margin-bottom: 0.75rem; }
+.tos-section ul { color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem; margin: 0.5rem 0 0.75rem 1.5rem; }
+.tos-section ul li { margin-bottom: 0.35rem; }
+
+.notice-box { background: rgba(176, 125, 42, 0.08); border: 1px solid var(--border-accent); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+.notice-box p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+.notice-box strong { color: var(--text-primary); }
+
+footer { background: var(--bg-secondary); border-top: 1px solid var(--border); }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding: 4rem 2rem 3rem; max-width: 1100px; margin: 0 auto; }
+.footer-brand p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; margin-top: 0.75rem; max-width: 260px; }
+.footer-col h4 { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+.footer-col a { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.6rem; transition: color 0.2s; }
+.footer-col a:hover { color: var(--accent); }
+.footer-disclaimer { display: block; color: var(--text-muted); font-size: 0.78rem; line-height: 1.65; margin-top: 0.5rem; }
+.footer-bottom { border-top: 1px solid var(--border); padding: 1.5rem 2rem; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.footer-bottom p { color: var(--text-muted); font-size: 0.78rem; }
+.footer-bottom .footer-links { display: flex; gap: 1.5rem; }
+.footer-bottom .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.78rem; transition: color 0.25s; }
+.footer-bottom .footer-links a:hover { color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .nav-links a:not(.btn-subscribe) { display: none; }
+  nav { padding: 0.75rem 1.25rem; }
+  .page-header { padding: 3rem 1.25rem 1.5rem; }
+  .tos-body { padding: 1.5rem 1.25rem 4rem; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.25rem 2rem; }
+  .footer-bottom { padding: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ECON INDICATORS TICKER -->
+<div class="ticker-bar-econ">
+  <span class="econ-label">Markets</span>
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="symbol">WTI</span> $68.42 <span class="down">▼ 0.8%</span></div>
+    <div class="ticker-item"><span class="symbol">GOLD</span> $3,342 <span class="up">▲ 0.5%</span></div>
+    <div class="ticker-item"><span class="symbol">SILVER</span> $32.18 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">NAT GAS</span> $2.94 <span class="down">▼ 1.2%</span></div>
+    <div class="ticker-item"><span class="symbol">CPI YoY</span> 2.4% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">FED RATE</span> 4.25–4.50% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">10Y YIELD</span> 4.38% <span class="up">▲ 0.04</span></div>
+    <div class="ticker-item"><span class="symbol">2Y YIELD</span> 3.97% <span class="down">▼ 0.02</span></div>
+    <div class="ticker-item"><span class="symbol">VIX</span> 16.42 <span class="down">▼ 4.1%</span></div>
+    <div class="ticker-item"><span class="symbol">DXY</span> 104.82 <span class="up">▲ 0.2%</span></div>
+    <div class="ticker-item"><span class="symbol">EUR/USD</span> 1.0841 <span class="down">▼ 0.1%</span></div>
+    <div class="ticker-item"><span class="symbol">USD/JPY</span> 157.34 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">COPPER</span> $4.62 <span class="up">▲ 0.7%</span></div>
+    <div class="ticker-item"><span class="symbol">GDP GR</span> +2.8% <span class="neutral">Q1 2026</span></div>
+    <div class="ticker-item"><span class="symbol">UNEMP</span> 4.1% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">WTI</span> $68.42 <span class="down">▼ 0.8%</span></div>
+    <div class="ticker-item"><span class="symbol">GOLD</span> $3,342 <span class="up">▲ 0.5%</span></div>
+    <div class="ticker-item"><span class="symbol">SILVER</span> $32.18 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">NAT GAS</span> $2.94 <span class="down">▼ 1.2%</span></div>
+    <div class="ticker-item"><span class="symbol">CPI YoY</span> 2.4% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">FED RATE</span> 4.25–4.50% <span class="neutral">—</span></div>
+    <div class="ticker-item"><span class="symbol">10Y YIELD</span> 4.38% <span class="up">▲ 0.04</span></div>
+    <div class="ticker-item"><span class="symbol">2Y YIELD</span> 3.97% <span class="down">▼ 0.02</span></div>
+    <div class="ticker-item"><span class="symbol">VIX</span> 16.42 <span class="down">▼ 4.1%</span></div>
+    <div class="ticker-item"><span class="symbol">DXY</span> 104.82 <span class="up">▲ 0.2%</span></div>
+    <div class="ticker-item"><span class="symbol">EUR/USD</span> 1.0841 <span class="down">▼ 0.1%</span></div>
+    <div class="ticker-item"><span class="symbol">USD/JPY</span> 157.34 <span class="up">▲ 0.3%</span></div>
+    <div class="ticker-item"><span class="symbol">COPPER</span> $4.62 <span class="up">▲ 0.7%</span></div>
+    <div class="ticker-item"><span class="symbol">GDP GR</span> +2.8% <span class="neutral">Q1 2026</span></div>
+    <div class="ticker-item"><span class="symbol">UNEMP</span> 4.1% <span class="neutral">—</span></div>
+  </div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">TS</div>
+    Tasty Stocks
+  </a>
+  <div class="nav-links">
+    <a href="features.html">What You Get</a>
+    <a href="track-record.html">Track Record</a>
+    <a href="positions.html">Closed Positions</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://tastystocks.substack.com/" class="btn-subscribe">Read the Newsletter →</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="section-label">// Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: June 2026 &nbsp;|&nbsp; Effective immediately upon use</p>
+</div>
+
+<div class="tos-body">
+
+  <div class="notice-box">
+    <p><strong>Your privacy matters.</strong> This Privacy Policy explains what information Tasty Stocks collects, how we use it, and your rights regarding that information. By using our website or subscribing to our newsletter, you agree to the practices described in this policy.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>1. Who We Are</h2>
+    <p>Tasty Stocks is a financial newsletter published by TastyStocks LLC ("Company," "we," "us," or "our"). Our website is located at <a href="https://tastystocks.com" style="color:var(--accent);">tastystocks.com</a> and our newsletter is distributed via Substack at <a href="https://tastystocks.substack.com/" style="color:var(--accent);">tastystocks.substack.com</a>.</p>
+    <p>If you have questions about this Privacy Policy or our data practices, please contact us via the information in Section 11.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Information You Provide</h3>
+    <p>We collect information you provide directly when you:</p>
+    <ul>
+      <li><strong>Subscribe to our newsletter:</strong> your email address, name (if provided), and subscription tier (free or paid).</li>
+      <li><strong>Make a payment:</strong> billing information is collected and processed by Substack. We do not store payment card data.</li>
+      <li><strong>Contact us:</strong> your name, email address, and the content of your message.</li>
+    </ul>
+    <h3>2.2 Information Collected Automatically</h3>
+    <p>When you visit tastystocks.com, we or our service providers may automatically collect:</p>
+    <ul>
+      <li>IP address and general geographic location (country/region);</li>
+      <li>Browser type, operating system, and device information;</li>
+      <li>Pages visited, time on page, and referral source;</li>
+      <li>Date and time of your visit.</li>
+    </ul>
+    <h3>2.3 Newsletter Engagement Data</h3>
+    <p>Substack, our newsletter platform, may collect data on whether you open emails, which links you click, and when. This data is subject to Substack's own Privacy Policy.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Deliver newsletter issues and trade alerts to your email address;</li>
+      <li>Manage your subscription, including billing and account changes;</li>
+      <li>Respond to your questions and support requests;</li>
+      <li>Improve the quality, relevance, and frequency of our content;</li>
+      <li>Analyze aggregate usage patterns on our website (not individual tracking);</li>
+      <li>Comply with applicable legal obligations;</li>
+      <li>Detect and prevent fraud or unauthorized access.</li>
+    </ul>
+    <p>We do not sell your personal information. We do not use your data for automated individual profiling that produces legal or similarly significant effects on you.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>4. Email Communications</h2>
+    <p>By subscribing to Tasty Stocks, you consent to receive newsletter issues, trade alerts, and occasional announcements via email. Every email we send includes an unsubscribe link. You may also manage or cancel your subscription directly through your Substack account settings at any time.</p>
+    <p>Transactional emails (such as subscription confirmation, billing receipts, and password reset) are not subject to marketing opt-out but are sent only as needed for account management.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>5. Third-Party Services</h2>
+    <p>We rely on a small number of third-party services to operate. Each has its own privacy practices:</p>
+    <ul>
+      <li><strong>Substack</strong> — newsletter delivery and subscription management. Substack processes subscriber email addresses and payment data on our behalf. See <a href="https://substack.com/privacy" style="color:var(--accent);">substack.com/privacy</a>.</li>
+      <li><strong>Google Fonts</strong> — typefaces loaded from Google's CDN when you visit our site. See <a href="https://policies.google.com/privacy" style="color:var(--accent);">policies.google.com/privacy</a>.</li>
+      <li><strong>GitHub Pages</strong> — static website hosting. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" style="color:var(--accent);">GitHub Privacy Statement</a>.</li>
+    </ul>
+    <p>We do not share your personal information with advertisers or data brokers.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>6. Cookies and Tracking</h2>
+    <p>Our static website (tastystocks.com) does not set first-party cookies or use advertising trackers. We do not run Google Analytics, Meta Pixel, or similar behavioral advertising technologies on this site.</p>
+    <p>Third-party services referenced above (Google Fonts, Substack) may set their own cookies when you interact with them. You can control cookies through your browser settings, though disabling certain cookies may affect functionality.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>7. Data Retention</h2>
+    <p>We retain your email address and subscription data for as long as your subscription is active. If you unsubscribe, Substack removes you from our active mailing list. We may retain anonymized or aggregated data for analytical purposes after you unsubscribe.</p>
+    <p>Any direct communications you send us (e.g., support emails) are retained for as long as necessary to resolve your inquiry and comply with applicable record-keeping requirements.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>8. Your Privacy Rights</h2>
+    <p>Depending on your location, you may have rights regarding your personal data, including:</p>
+    <ul>
+      <li><strong>Access:</strong> request a copy of the personal data we hold about you;</li>
+      <li><strong>Correction:</strong> request that we correct inaccurate information;</li>
+      <li><strong>Deletion:</strong> request that we delete your personal data, subject to legal obligations;</li>
+      <li><strong>Opt-out:</strong> unsubscribe from marketing emails at any time via the link in any newsletter;</li>
+      <li><strong>Portability:</strong> request your data in a portable format where technically feasible.</li>
+    </ul>
+    <p>Residents of the European Economic Area (EEA) and the United Kingdom have rights under the General Data Protection Regulation (GDPR) and UK GDPR respectively. California residents have rights under the California Consumer Privacy Act (CCPA). To exercise any of these rights, contact us at the address in Section 11.</p>
+    <p>We will respond to verified requests within 30 days (or within the timeframe required by applicable law).</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>9. Children's Privacy</h2>
+    <p>Our Service is not directed to individuals under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe we have inadvertently collected information from a minor, please contact us immediately and we will delete it promptly.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify subscribers via email.</p>
+    <p>Your continued use of the Service after any changes constitutes your acceptance of the updated policy. We encourage you to review this page periodically.</p>
+  </div>
+
+  <div class="tos-section">
+    <h2>11. Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+    <ul>
+      <li>Website: <a href="https://tastystocks.com" style="color: var(--accent);">tastystocks.com</a></li>
+      <li>Newsletter: <a href="https://tastystocks.substack.com/" style="color: var(--accent);">tastystocks.substack.com</a></li>
+    </ul>
+    <p style="margin-top:1rem; font-size:0.85rem; color: var(--text-muted);">TastyStocks LLC. All rights reserved.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" style="font-size:1.2rem;">
+        <div class="logo-icon">TS</div>
+        Tasty Stocks
+      </a>
+      <p>Professional-grade stock picks, options alerts, and equity analysis — delivered daily to your inbox.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <a href="https://tastystocks.substack.com/subscribe">Subscribe Free</a>
+      <a href="pricing.html">View Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="features.html">What You Get</a>
+      <a href="track-record.html">Track Record</a>
+      <a href="positions.html">Closed Positions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="privacy-policy.html" class="active">Privacy Policy</a>
+      <span class="footer-disclaimer">Not financial advice. Past performance is not indicative of future results.</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 TastyStocks LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="robots.txt">Robots</a>
+      <a href="llms.txt">LLMs</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
